@@ -31,6 +31,6 @@ class Volunteer
   end
 
   def ==(volunteer_to_compare)
-    self.name == volunteer_to_compare && self.id == volunteer_to_compare.id
+    self.name == volunteer_to_compare.name && self.id == volunteer_to_compare.id
   end
 end
