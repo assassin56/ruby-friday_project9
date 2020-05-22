@@ -3,12 +3,12 @@ require 'pry'
 class Project
   attr_reader :id
   attr_accessor :title, :id
-
+  
   def initialize(attributes)
     @title = attributes.fetch(:title)
     @id = attributes.fetch(:id)
   end
-
+  
   def self.all
     returned_projects = DB.exec("SELECT * FROM projects")
     projects = []
@@ -19,13 +19,27 @@ class Project
     end
     projects
   end
+  
+  def self.find(id)
+    project = DB.exec("SELECT * FROM projects WHERE id = #{id};").first
+    title = project.fetch("title")
+    puts "did we make it in?", title
+    binding.pry
+    id = project.fetch("id").to_i
+    Project.new({:title => title, :id => id})
+  end
+  
+  def update(title)
+    @title = title
+    DB.exec("UPDATE projects SET title = '#{@title}' WHERE id = #{@id};")
+  end
 
   def save()
     result = DB.exec("INSERT INTO projects (title) VALUES ('#{@title}') RETURNING id;")
     @id = result.first().fetch("id").to_i
   end
-
+    
   def ==(project_to_compare)
-    self.title() == project_to_compare.title()
+    self.title() == project_to_compare.title() && self.id == project_to_compare.id
   end
 end
