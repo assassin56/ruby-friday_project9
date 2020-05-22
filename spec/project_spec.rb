@@ -31,7 +31,7 @@ describe '#Project' do
 
   context '.all' do
     it 'is empty to start' do
-      expect(Project.all).to(eq(false))
+      expect(Project.all).to(eq([]))
     end
 
     # it 'returns all projects' do
