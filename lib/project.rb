@@ -36,6 +36,10 @@ class Project
     result = DB.exec("INSERT INTO projects (title) VALUES ('#{@title}') RETURNING id;")
     @id = result.first().fetch("id").to_i
   end
+
+  def delete()
+    DB.exec("DELETE FROM projects WHERE id = #{@id};")
+  end
     
   def ==(project_to_compare)
     self.title() == project_to_compare.title() && self.id == project_to_compare.id
