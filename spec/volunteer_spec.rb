@@ -25,7 +25,7 @@ describe Volunteer do
 
   context '.all' do
     it 'is empty to start' do
-      expect(Volunteer.all).to(eq(false))
+      expect(Volunteer.all).to(eq([]))
     end
 
     # it 'returns all volunteers' do
