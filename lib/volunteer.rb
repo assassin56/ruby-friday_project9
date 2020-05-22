@@ -2,7 +2,7 @@ require 'pry'
 
 class Volunteer
   attr_reader :id
-  attr_accessor :name, :id, :project_id
+  attr_accessor :name, :project_id, :id
 
   def initialize(attributes)
     @name = attributes.fetch(:name)
