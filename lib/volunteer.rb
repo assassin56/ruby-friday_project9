@@ -22,7 +22,7 @@ class Volunteer
     volunteers
   end
 
-  def self.find(project_id, id)
+  def self.find(id)
     volunteer = DB.exec("SELECT * FROM volunteers WHERE id = #{id};").first
     name = volunteer.fetch("name")
     id = volunteer.fetch("id").to_i
