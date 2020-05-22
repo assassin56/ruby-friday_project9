@@ -20,12 +20,12 @@ class Project
     projects
   end
   
-  # def self.find(id)
-  #   project = DB.exec("SELECT * FROM projects WHERE id = #{id};").first
-  #   title = project.fetch("title")
-  #   id = project.fetch("id").to_i
-  #   Project.new({:title => title, :id => id})
-  # end
+  def self.find(id)
+    project = DB.exec("SELECT * FROM projects WHERE id = #{id};").first
+    title = project.fetch("title")
+    id = project.fetch("id").to_i
+    Project.new({:title => title, :id => id})
+  end
   
   def update(title)
     @title = title
@@ -42,6 +42,6 @@ class Project
   end
     
   def ==(project_to_compare)
-    self.title() == project_to_compare.title() && self.id == project_to_compare.id
+    self.title == project_to_compare.title && self.id == project_to_compare.id
   end
 end
