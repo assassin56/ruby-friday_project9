@@ -78,7 +78,7 @@ describe '#Project' do
       project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
       project.save
       project.update({:title => 'Teaching Ruby to Kids'})
-      expect(project.title).to(eq(:title => 'The Wrong Title'))
+      expect(project.title).to(eq(:title => 'Teaching Ruby to Kids'))
     end
   end
 
