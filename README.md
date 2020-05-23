@@ -2,10 +2,9 @@
 ## _By: Antonio Cruz_
 ## Description
 
-_ _
+_This is an application that will allow the user to track current projects and those projects' volunteers._
 
 ## Setup
-
 
 1. If you would like to view this project locally... :
 
@@ -21,8 +20,18 @@ _ _
 
 7. Run "ruby app.rb" to open the server."
 
+## Specs
+| :-------|
+| Non-profit employees can view the projects|
+| Non-profit employees can add to the projects|
+| Non-profit employees can update the projects|
+| Non-profit employees can delete the projects|
+| Non-profit employees can view volunteers|
+| Non-profit employees can add volunteers to a project|
+
+
 ## Known Bugs
-_No known bugs at this time_
+_app.rb currently has no routes, and integration specs, along with views, have not yet been applied._
 
 ## Technology
 
@@ -35,10 +44,6 @@ _No known bugs at this time_
 * _Sinatra_
 * _Sinatra-contrib_
 * _Pry_
-
-
-## Specs
-
 
 ## Legal
 
