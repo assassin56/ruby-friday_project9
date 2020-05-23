@@ -40,7 +40,11 @@ class Project
   def delete()
     DB.exec("DELETE FROM projects WHERE id = #{@id};")
   end
-    
+
+  def volunteers
+    Volunteer.all()
+  end
+
   def ==(project_to_compare)
     self.title == project_to_compare.title && self.id == project_to_compare.id
   end
