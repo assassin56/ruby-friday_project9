@@ -54,4 +54,13 @@ describe Volunteer do
       expect(Volunteer.find(volunteer1.id)).to(eq(volunteer1))
     end
   end
+
+  describe '#update' do
+    it('updates a volunteer name based on its id') do
+      volunteer = Volunteer.new({:name => "Antonio Cruz", :project_id => 1, :id => nil})
+      volunteer.save()
+      volunteer.update("Tony Cruz", 1)
+      expect(volunteer.name).to(eq("Tony Cruz"))
+    end
+  end
 end
