@@ -35,6 +35,12 @@ class Volunteer
     @id = result.first.fetch("id").to_i
   end
 
+  def update(name, project_id)
+    @name = name
+    @project_id = project_id
+    self.save()
+  end 
+
   def ==(volunteer_to_compare)
     self.name == volunteer_to_compare.name && self.id == volunteer_to_compare.id
   end
