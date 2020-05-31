@@ -81,7 +81,7 @@ end
 patch('/projects/:id/volunteers/:volunteer_id') do
   @project = Project.find(params[:id].to_i())
   @volunteer = Volunteer.find(params[:volunteer_id].to_i())
-  @volunteer.update(params[:edit_volunteer], @project.id)
+  @volunteer.update({:name => params[:edit_volunteer]})
   erb(:project)
 end
 
