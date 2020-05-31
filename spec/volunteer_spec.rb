@@ -59,7 +59,7 @@ describe Volunteer do
     it('updates a volunteer name based on its id') do
       volunteer = Volunteer.new({:name => "Antonio Cruz", :project_id => 1, :id => nil})
       volunteer.save()
-      volunteer.update("Tony Cruz", 1)
+      volunteer.update({:name => "Tony Cruz"})
       expect(volunteer.name).to(eq("Tony Cruz"))
     end
   end
