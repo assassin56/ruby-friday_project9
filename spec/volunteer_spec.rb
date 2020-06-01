@@ -63,4 +63,14 @@ describe Volunteer do
       expect(volunteer.name).to(eq("Tony Cruz"))
     end
   end
+
+#   describe '#project' do
+#     it 'finds the project a volunteer is assigned to' do
+#       project = Project.new({:title => 'New Project', :id => nil})
+#       project.save()
+#       volunteer = Volunteer.new({:name => 'Tony Cruz', :project_id => 1, :id => nil})
+#       volunteer.save()
+#       expect(volunteer.project()).to(eq(project))
+#     end
+#   end
 end
