@@ -55,22 +55,13 @@ describe Volunteer do
     end
   end
 
-  describe '#update' do
-    it('updates a volunteer name based on its id') do
-      volunteer = Volunteer.new({:name => "Antonio Cruz", :project_id => 1, :id => nil})
+  describe '#project' do
+    it 'finds the project a volunteer is assigned to' do
+      project = Project.new({:title => 'New Project', :id => nil})
+      project.save()
+      volunteer = Volunteer.new({:name => 'Tony Cruz', :project_id => 1, :id => nil})
       volunteer.save()
-      volunteer.update({:name => "Tony Cruz"})
-      expect(volunteer.name).to(eq("Tony Cruz"))
+      expect(volunteer.project()).to(eq())
     end
   end
-
-#   describe '#project' do
-#     it 'finds the project a volunteer is assigned to' do
-#       project = Project.new({:title => 'New Project', :id => nil})
-#       project.save()
-#       volunteer = Volunteer.new({:name => 'Tony Cruz', :project_id => 1, :id => nil})
-#       volunteer.save()
-#       expect(volunteer.project()).to(eq(project))
-#     end
-#   end
 end

@@ -37,8 +37,8 @@ class Volunteer
 
   def update(attributes)
     @name = attributes[:name]
-    DB.exec("UPDATE volunteers SET name = '#{@name}' WHERE id = #{@id};")
-    self.save()
+    @project_id = attributes[:project_id]
+    DB.exec("UPDATE volunteers SET name = '#{@name}', project_id = #{@project_id} WHERE id = #{@id};")
   end 
 
   def ==(volunteer_to_compare)
