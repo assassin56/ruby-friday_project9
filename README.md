@@ -21,7 +21,8 @@ _This is an application that will allow the user to track current projects and t
 7. Run "ruby app.rb" to open the server."
 
 ## Specs
-| :-------|
+| |
+|---|
 | Non-profit employees can view the projects|
 | Non-profit employees can add to the projects|
 | Non-profit employees can update the projects|
