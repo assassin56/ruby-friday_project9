@@ -42,7 +42,7 @@ class Project
   end
 
   def volunteers
-    Volunteer.all()
+    Volunteer.find_by_project(@id)
   end
 
   def ==(project_to_compare)
