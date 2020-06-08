@@ -116,6 +116,9 @@ COPY public.projects (id, title) FROM stdin;
 --
 
 COPY public.volunteers (id, project_id, name) FROM stdin;
+646	844	\N
+647	845	\N
+648	846	\N
 \.
 
 
@@ -123,14 +126,14 @@ COPY public.volunteers (id, project_id, name) FROM stdin;
 -- Name: projects_id_seq; Type: SEQUENCE SET; Schema: public; Owner: antoniocruz1
 --
 
-SELECT pg_catalog.setval('public.projects_id_seq', 843, true);
+SELECT pg_catalog.setval('public.projects_id_seq', 849, true);
 
 
 --
 -- Name: volunteers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: antoniocruz1
 --
 
-SELECT pg_catalog.setval('public.volunteers_id_seq', 645, true);
+SELECT pg_catalog.setval('public.volunteers_id_seq', 656, true);
 
 
 --
